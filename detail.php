@@ -69,7 +69,7 @@ button.mercadopago-button {
 
     $preference->external_reference = "ABCD1234";
 
-    $preference->notification_url = "https://integracion-mp.herokuapp.com/notifications.php";
+    $preference->notification_url = "https://fast-mp.herokuapp.com/notifications.php";
 
     $preference->payment_methods  = [
                                         'default_installments' => 6,    # 6 Cuota
@@ -83,7 +83,7 @@ button.mercadopago-button {
     $item->id               = $_POST['id'];
     $item->title            = $_POST['title']; 
     $item->description      = $_POST['description']; 
-    $item->picture_url      = "https://integracion-mp.herokuapp.com/".$_POST['img'];
+    $item->picture_url      = "https://fast-mp.herokuapp.com/".$_POST['img'];
     $item->quantity         = $_POST['unit'];
     $item->unit_price       = $_POST['price'];
 
@@ -114,9 +114,9 @@ button.mercadopago-button {
     );
     # Return the HTML code for button
     $preference->back_urls = array(
-                    "success" => "https://integracion-mp.herokuapp.com/success.php",
-                    "failure" => "https://integracion-mp.herokuapp.com/failure.php",
-                    "pending" => "https://integracion-mp.herokuapp.com/pending.php"
+                    "success" => "https://fast-mp.herokuapp.com/success.php",
+                    "failure" => "https://fast-mp.herokuapp.com/failure.php",
+                    "pending" => "https://fast-mp.herokuapp.com/pending.php"
                 );
 
     $preference->auto_return = "approved";
@@ -214,7 +214,7 @@ button.mercadopago-button {
                                         </h3>
                                     </div>
                                     <!-- <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button> -->
-                                    <form action="https://integracion-mp.herokuapp.com/detail.php" method="POST">
+                                    <form action="https://fast-mp.herokuapp.com/detail.php" method="POST">
                                       <script
                                        src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
                                        data-preference-id="<?php echo $preference->id; ?>" data-button-label="Pagar la compra" data-elements-color="#2D3277" >
